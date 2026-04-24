@@ -3,7 +3,7 @@
 | Dark Mode | Light Mode |
 | :---: | :---: |
 | <img src="assets/logo/via-logo-dark.svg" alt="VIA logo — dark mode" width="240"> | <img src="assets/logo/via-logo-light.svg" alt="VIA logo — light mode" width="240"> |
-| 어둠 속에서 발견한<br>명확한 통찰의 에너지 | 정밀한 분석이 설계한<br>압도적 신뢰의 가치 |
+| Momentum,<br>toward The Essence | The Essence —<br>made Vivid |
 
 Experimental brand development for **VIA**.
 
