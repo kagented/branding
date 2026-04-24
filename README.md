@@ -1,5 +1,10 @@
 # branding
 
+| Dark Mode | Light Mode |
+| :---: | :---: |
+| <img src="assets/logo/via-logo-dark.svg" alt="VIA logo — dark mode" width="240"> | <img src="assets/logo/via-logo-light.svg" alt="VIA logo — light mode" width="240"> |
+| 어둠 속에서 발견한<br>명확한 통찰의 에너지 | 정밀한 분석이 설계한<br>압도적 신뢰의 가치 |
+
 Experimental brand development for **VIA**.
 
 ## Concept
@@ -17,7 +22,9 @@ branding/
 ├── assets/
 │   ├── logo/
 │   │   ├── via-logo.svg        Full mark (triangle + both arcs), uses currentColor
-│   │   └── via-logo-mark.svg   Triangle only, for favicons / small sizes
+│   │   ├── via-logo-mark.svg   Triangle only, for favicons / small sizes
+│   │   ├── via-logo-dark.svg   Pre-colored preview (white on #0a0a0a) for README / GitHub
+│   │   └── via-logo-light.svg  Pre-colored preview (black on #f8f8f8) for README / GitHub
 │   └── tokens/
 │       └── colors.css          --via-dark-bg / --via-dark-fg / --via-light-bg / --via-light-fg
 ├── examples/
@@ -37,8 +44,3 @@ The SVGs use `stroke="currentColor"`, so they inherit their parent's `color`:
 ```
 
 Inline SVG also works and lets CSS retarget the color per context.
-
-## Taglines
-
-- Dark: 어둠 속에서 발견한 명확한 통찰의 에너지
-- Light: 정밀한 분석이 설계한 압도적 신뢰의 가치
