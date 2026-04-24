@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="VIA mark">
+    <title>VIA mark</title>
+    <polygon
+        points="50,43.5 41.2,56.2 58.8,56.2"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.4"
+        stroke-linejoin="round"
+    />
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="VIA logo">
+    <title>VIA</title>
+    <polygon
+        points="50,43.5 41.2,56.2 58.8,56.2"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.4"
+        stroke-linejoin="round"
+    />
+    <path
+        d="M 35.5 67.5 A 20.5 20.5 0 1 1 64.5 67.5"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="0.9"
+        stroke-opacity="0.82"
+        stroke-linecap="round"
+    />
+    <path
+        d="M 28 78 A 33 33 0 1 1 72 78"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="0.45"
+        stroke-opacity="0.42"
+        stroke-dasharray="32 10 38 12 12 6"
+        stroke-linecap="round"
+    />
+</svg>

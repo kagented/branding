@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIA Logo — Usage Examples</title>
+    <link rel="stylesheet" href="../assets/tokens/colors.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .row {
+            display: flex;
+            min-height: 50vh;
+        }
+        .cell {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+        }
+        .dark { background: var(--via-dark-bg); color: var(--via-dark-fg); }
+        .light { background: var(--via-light-bg); color: var(--via-light-fg); }
+        .accent { background: #0a0a0a; color: #ff6a3d; }
+        .logo-lg { width: 220px; height: 220px; }
+        .logo-sm { width: 48px; height: 48px; }
+        .label {
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="cell dark">
+            <div class="label">Dark · Full</div>
+            <img class="logo-lg" src="../assets/logo/via-logo.svg" alt="VIA">
+        </div>
+        <div class="cell light">
+            <div class="label">Light · Full</div>
+            <img class="logo-lg" src="../assets/logo/via-logo.svg" alt="VIA">
+        </div>
+    </div>
+    <div class="row">
+        <div class="cell accent">
+            <div class="label">Accent · currentColor inherit</div>
+            <object class="logo-lg" type="image/svg+xml" data="../assets/logo/via-logo.svg" aria-label="VIA accent"></object>
+        </div>
+        <div class="cell light">
+            <div class="label">Mark only · Favicon size</div>
+            <img class="logo-sm" src="../assets/logo/via-logo-mark.svg" alt="VIA mark">
+        </div>
+    </div>
+</body>
+</html>
