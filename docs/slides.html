@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIA — Pitch Slides</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+/* 1. CORE SETUP */
+* { box-sizing: border-box; }
+
+body {
+  background-color: #1a1a1a;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1fr;
+  margin: 0;
+  min-height: 100vh;
+  padding: 40px 0;
+  place-items: center;
+}
+
+.slide-container {
+  align-items: flex-start;
+  background-color: #0a0a0a;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Lato', sans-serif;
+  height: 720px;
+  justify-content: flex-start;
+  overflow: hidden;
+  padding: 80px;
+  position: relative;
+  width: 1280px;
+}
+
+/* 1.1 BACKGROUND DESIGN */
+.slide-container::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 75%);
+  z-index: 0;
+}
+
+.slide-container > * { position: relative; z-index: 1; }
+
+/* 2. TYPOGRAPHY */
+.slide-container h1,
+.slide-container h2,
+.slide-container h3 {
+  color: #ffffff;
+  font-family: 'Jost', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.slide-container h1 { font-size: 110px; line-height: 0.9; letter-spacing: 18px; }
+.slide-container .slide-title {
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 60px;
+  border-left: 5px solid #ffffff;
+  padding-left: 25px;
+  text-align: left;
+  width: 100%;
+}
+
+.slide-container h3 { font-size: 24px; margin-bottom: 20px; }
+.slide-container p { color: #b1b1b1; font-size: 20px; line-height: 1.6; font-weight: 300; }
+
+.slide-container .content-area {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  width: 100%;
+}
+
+/* 3. LAYOUT DEFINITIONS */
+.tiled-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 100%;
+}
+
+.tile {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 60px 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.via-display {
+  font-family: 'Jost';
+  font-size: 150px;
+  color: #ffffff;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+.via-display span { display: inline-block; }
+
+.footer-tag {
+  position: absolute;
+  bottom: 40px;
+  left: 80px;
+  font-size: 11px;
+  opacity: 0.3;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.svg-white { stroke: #ffffff; fill: none; }
+
+/* HOOK LIST STYLE */
+.hook-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hook-item {
+  font-size: 42px;
+  color: #ffffff;
+  margin-bottom: 25px;
+  font-family: 'Jost', sans-serif;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+.hook-item strong {
+  font-weight: 700;
+  color: #ffffff;
+  border-bottom: 2px solid rgba(255,255,255,0.3);
+}
+
+/* TYPOGRAPHY LAYOUT FOR IDENTITY */
+.reciprocity-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.reciprocity-subtitle {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 20px;
+}
+
+.reciprocity-item {
+  flex: 1;
+  text-align: center;
+  font-size: 16px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* PRINT / PDF EXPORT — one slide per page, no outer canvas, no gaps */
+@page {
+  size: 1280px 720px;
+  margin: 0;
+}
+
+@media print {
+  body {
+    background-color: #0a0a0a;
+    display: block;
+    padding: 0;
+    gap: 0;
+  }
+
+  .slide-container {
+    box-shadow: none;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .slide-container:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+}
+    </style>
+</head>
+<body>
+
+<!-- Slide 1: Title -->
+<div class="slide-container" id="slide1">
+    <div class="content-area" style="text-align: center;">
+        <div style="width: 160px; height: 160px; margin: 0 auto 40px;">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="50,43.5 41.2,56.2 58.8,56.2" class="svg-white" stroke-width="1.4" stroke-linejoin="round"></polygon>
+                <path d="M 35.5 67.5 A 20.5 20.5 0 1 1 64.5 67.5" class="svg-white" stroke-width="0.9" stroke-opacity="0.85" stroke-linecap="round"></path>
+                <path d="M 28 78 A 33 33 0 1 1 72 78" class="svg-white" stroke-width="0.45" stroke-opacity="0.46" stroke-dasharray="32 10 38 12 12 6" stroke-linecap="round"></path>
+            </svg>
+        </div>
+        <h1>VIA</h1>
+        <p style="letter-spacing: 8px; font-size: 22px; color: #fff; margin-top: 20px; opacity: 0.8;">YOUR PATH TO ESSENCE</p>
+    </div>
+    <div class="footer-tag">VIA // IDENTITY</div>
+</div>
+
+<!-- Slide 2: Strategic Hooks -->
+<div class="slide-container" id="slide2">
+    <div class="content-area">
+        <div class="hook-list">
+            <div class="hook-item"><strong>REDACT</strong> the Noise</div>
+            <div class="hook-item"><strong>ALIGN</strong> the Idea</div>
+            <div class="hook-item"><strong>CREATE</strong> the Strategy</div>
+            <div class="hook-item"><strong>OWN</strong> the Impact</div>
+        </div>
+    </div>
+    <div class="footer-tag">VIA // STRATEGIC VISION</div>
+</div>
+
+<!-- Slide 3: Operational Logic -->
+<div class="slide-container" id="slide3">
+    <h2 class="slide-title">Operational Logic</h2>
+    <div class="content-area">
+        <div class="tiled-grid">
+            <div class="tile">
+                <h3>DECONSTRUCT</h3>
+                <p>Challenge the status quo to reveal what truly matters.<br>– <strong>Break</strong> apart assumptions<br>– Surface foundational <strong>Logic</strong></p>
+            </div>
+            <div class="tile">
+                <h3>ENGINEER</h3>
+                <p>Translate insight into structured execution.<br>– <strong>Align </strong>logic with action<br>– Establish geometric <strong>clarity</strong><br>– <strong>Remove</strong> ambiguity</p>
+            </div>
+            <div class="tile">
+                <h3>BUILD</h3>
+                <p>Materialize the essential core with intent.<br>– <strong>Design</strong> with restraint<br>– <strong>Create</strong> space for meaning<br>– <strong>Manifest</strong> authority</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-tag">VIA // OPERATIONAL LOGIC</div>
+</div>
+
+<!-- Slide 4: Gateway Mechanism -->
+<div class="slide-container" id="slide4">
+    <h2 class="slide-title">Gateway Mechanism</h2>
+    <div class="content-area">
+        <div class="two-column" style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; width: 100%;">
+            <div>
+                <h3>Accessing Essence</h3>
+                <p>The negative space at the base is a functional gateway—the entry point from chaotic externals to the crystalline interior.</p>
+                <p>Open architecture suggests truth is reachable through the correct channel of disciplined analysis.</p>
+            </div>
+            <div style="height: 400px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.01);">
+                <svg viewBox="0 0 100 100" style="width: 80%;">
+                    <polygon points="50,43.5 41.2,56.2 58.8,56.2" class="svg-white" stroke-width="1.4" stroke-linejoin="round"></polygon>
+                    <path d="M 35.5 67.5 A 20.5 20.5 0 1 1 64.5 67.5" class="svg-white" stroke-width="0.9" stroke-opacity="0.2" stroke-linecap="round"></path>
+                    <path d="M 28 78 A 33 33 0 1 1 72 78" class="svg-white" stroke-width="0.45" stroke-opacity="0.1" stroke-dasharray="32 10 38 12 12 6" stroke-linecap="round"></path>
+                    <line x1="50" y1="95" x2="50" y2="60" stroke="#fff" stroke-width="1.2" stroke-dasharray="5 5" opacity="0.4"></line>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="footer-tag">VIA // GATEWAY</div>
+</div>
+
+<!-- Slide 5: Reciprocal Identity -->
+<div class="slide-container" id="slide5">
+    <h2 class="slide-title">Reciprocal Identity</h2>
+    <div class="content-area">
+        <div class="reciprocity-layout">
+            <div class="via-display"><span>V</span><span>I</span><span>A</span></div>
+            <div class="reciprocity-subtitle">
+                <div class="reciprocity-item">Chasm</div>
+                <div class="reciprocity-item">Gateway</div>
+                <div class="reciprocity-item">Apex</div>
+            </div>
+            <p style="text-align: center; max-width: 850px; margin-top: 50px; color: #fff; font-weight: 300; font-size: 22px; line-height: 1.4;">
+                Streamlining the Pipeline from Status Quo to Ownsership.
+            </p>
+        </div>
+    </div>
+    <div class="footer-tag">VIA // TYPOGRAPHIC ARCHITECTURE</div>
+</div>
+
+<!-- Slide 6: Final Vision -->
+<div class="slide-container" id="slide6">
+    <div class="content-area" style="text-align: center;">
+        <h2 style="font-size: 70px; border: none; line-height: 1.2;">Precise Analysis.<br>Sharp Insight.<br>Pure Essence.</h2>
+        <p style="margin-top: 40px; font-size: 22px; opacity: 0.6; font-weight: 300; letter-spacing: 2px;">Transcending Noise. Architecting the Core.</p>
+        <div style="margin-top: 60px; width: 100px; height: 2px; background: #ffffff; margin: 0 auto; opacity: 0.3;"></div>
+        <p style="margin-top: 40px; font-size: 14px; letter-spacing: 10px; opacity: 0.4;">VIA STRATEGIC INTELLIGENCE</p>
+    </div>
+    <div class="footer-tag">© 2024 VIA STRATEGIC IDENTITY.</div>
+</div>
+
+</body>
+</html>
