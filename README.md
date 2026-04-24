@@ -3,7 +3,7 @@
 | Dark Mode | Light Mode |
 | :---: | :---: |
 | <img src="assets/logo/via-logo-dark.svg" alt="VIA logo — dark mode" width="240"> | <img src="assets/logo/via-logo-light.svg" alt="VIA logo — light mode" width="240"> |
-| Momentum,<br>toward Essence | Essence —<br>made Vivid |
+| Momentum, toward Essence | Essence — made Vivid |
 
 Experimental brand development for **VIA**.
 
